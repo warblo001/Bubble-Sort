@@ -1,22 +1,20 @@
 def bubble_sort(arr)
-  change = true
-  x = arr.length
-  while change
-    y = 0
-    change = false
-      for y in 1..(x-1) do
-        if arr[y-1] > arr[y]
-          arr[y-1], arr[y] = arr[y], arr[y-1]
-        change = true
-        end
-      end
-    x -= 1
-
+  (1..(arr.length - 1)).each do
+    (1..(arr.length - 1)).each do |y|
+      arr[y - 1], arr[y] = arr[y], arr[y - 1] if arr[y - 1] > arr[y]
     end
-
-    print arr
   end
+  print arr
+end
 
+def bubble_sort_by(arr)
+  (1..(arr.length - 1)).each do |y|
+    arr[y - 1], arr[y] = arr[y], arr[y - 1] if (yield arr[y - 1], arr[y]).positive?
+  end
+  print arr
+end
 
-bubble_sort([4,3,78,2,0,2])
-
+puts bubble_sort([4, 3, 78, 2, 0, 2])
+bubble_sort_by %w[hi hello hey] do |left, right|
+  left.length - right.length
+end
