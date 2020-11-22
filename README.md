@@ -8,10 +8,10 @@ Bubble sort, is a simple sorting algorithm that repeatedly steps through the lis
 
 ## About the Project
 
-In this project there are two methods `bubble_sort` and `bubble_sort_by`.
+In this project, there are two methods `bubble_sort` and `bubble_sort_by`.
     
    - `bubble_sort` method sorts the array of integers in ascending order.
-   - `bubble_sort_by` method sorts the array of strings in ascending order based on number of character in the strings.
+   - `bubble_sort_by` method sorts the array of strings in ascending order based on the number of characters in the strings.
 
 ## Built With
 
